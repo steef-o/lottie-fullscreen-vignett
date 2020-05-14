@@ -5,7 +5,7 @@ const animation = lottie.loadAnimation({
     renderer: 'svg',
     autoplay: true,
     loop: 1,
-    path: 'data/vignett_v.02.json'
+    path: 'data/vignett_v.03.json'
 });
 
 animation.addEventListener('DOMLoaded', function() {
@@ -21,3 +21,12 @@ animation.addEventListener('DOMLoaded', function() {
     // };
     // setText('Fasit is back!');
 });
+//
+// const getJokeFromAPI = async () => {
+//     const data = await fetch(`https://icanhazdadjoke.com/`).then(res => {
+//         return res.data;
+//     }).then(data)
+//
+// };
+//
+// console.log(getJokeFromAPI());
