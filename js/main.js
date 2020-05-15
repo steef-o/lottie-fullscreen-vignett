@@ -5,7 +5,7 @@ const animation = lottie.loadAnimation({
     renderer: 'svg',
     autoplay: true,
     loop: 1,
-    path: 'data/vignett_v.03.json'
+    path: 'data/vignette_v.04.json'
 });
 
 animation.addEventListener('DOMLoaded', function() {
