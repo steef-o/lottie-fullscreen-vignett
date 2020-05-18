@@ -26,7 +26,7 @@ weekday[6] = "Saturday";
         animation.addEventListener('loopComplete', function() {
             animContainer.style.display = 'none';
         });
-        setCustomText("Fasit is back!")
+        // setCustomText("Fasit is back!")
     });
 
 // }
