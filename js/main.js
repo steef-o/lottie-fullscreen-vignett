@@ -1,32 +1,38 @@
-const animContainer = document.getElementById('loader');
 
-const animation = lottie.loadAnimation({
-    container: animContainer,
-    renderer: 'svg',
-    autoplay: true,
-    loop: 1,
-    path: 'data/vignette_v.04.json'
-});
 
-animation.addEventListener('DOMLoaded', function() {
-    animation.addEventListener('loopComplete', function() {
-        animContainer.style.display = 'none';
+const date = new Date();
+const weekday  = new Array(7);
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+
+// if(weekday[date.getDay()] === "Monday") {
+    const animContainer = document.getElementById('loader');
+
+    const animation = lottie.loadAnimation({
+        container: animContainer,
+        renderer: 'svg',
+        autoplay: true,
+        loop: 1,
+        path: 'data/vignette_v.06.json'
     });
 
-    //tspan element
-    const text = document.getElementById('loader-text').children[0].children[0];
+    animation.addEventListener('DOMLoaded', function() {
+        animation.addEventListener('loopComplete', function() {
+            animContainer.style.display = 'none';
+        });
+        setCustomText("Fasit is back!")
+    });
 
-    // const setText = newText => {
-    //     text.innerHTML = newText;
-    // };
-    // setText('Fasit is back!');
-});
-//
-// const getJokeFromAPI = async () => {
-//     const data = await fetch(`https://icanhazdadjoke.com/`).then(res => {
-//         return res.data;
-//     }).then(data)
-//
-// };
-//
-// console.log(getJokeFromAPI());
+// }
+
+function setCustomText(text) {
+    // Get tspan element
+    const textRef = document.getElementById('loader-text').getElementsByTagName("tspan")[0];
+    textRef.innerHTML = text;
+}
