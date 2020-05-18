@@ -11,7 +11,7 @@ weekday[5] = "Friday";
 weekday[6] = "Saturday";
 
 
-// if(weekday[date.getDay()] === "Monday") {
+// if(weekday[date.getDay()] === "Friday") {
     const animContainer = document.getElementById('loader');
 
     const animation = lottie.loadAnimation({
