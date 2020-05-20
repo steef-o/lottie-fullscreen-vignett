@@ -8,7 +8,7 @@ weekday[4] = 'Thursday';
 weekday[5] = 'Friday';
 weekday[6] = 'Saturday';
 
-if (weekday[date.getDay()] === 'Tuesday') {
+// if (weekday[date.getDay()] === 'Tuesday') {
     const characterContainer = document.getElementById('character');
     const backdropContainer = document.getElementById('backdrop');
 
@@ -42,7 +42,7 @@ if (weekday[date.getDay()] === 'Tuesday') {
         });
         // setCustomText("Fasit is back!")
     });
-}
+// }
 
 function setCustomText(text) {
     // Get tspan element
